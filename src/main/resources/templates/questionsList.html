@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+    <body>
+        <form action="questions">
+            <input type="text" name="cityName"/> City name <br/>
+            <input type="submit" value="Search"/> <br/><br/>
+        </form>
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Content</th>
+                <th>Points for correct answer</th>
+                <th>Question is active</th>
+                <th>Answers for question</th>
+                <th>More Info</th>
+            </tr>
+            <tr th:each="question : ${questions}" th:object="${question}">
+                <td th:text="*{id}">Sample</td>
+                <td th:text="*{content}">Sample</td>
+                <td th:text="*{pointsForCorrectAnswer}">Sample</td>
+                <td th:text="*{active}">Sample</td>
+                <td th:text="*{answers}">Sample</td>
+<!--                <td> <a th:href="@{/web/city/id/{cityId}/(cityId=*{id})}"> View info </a></td>-->
+                <!--                <td> <a th:href="@{'/web/city/id/' + ${city.id}}"> View info </a></td>-->
+            </tr>
+        </table>
+    </body>
+</html>

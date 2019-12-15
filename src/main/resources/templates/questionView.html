@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div th:object="${question}">
+        Question content: <span th:text="*{content}"></span><br/>
+        Points for correct answer: <span th:text="*{pointsForCorrectAnswer}"></span><br/>
+        Question is active: <span th:text="*{active}"></span><br/>
+        Answers: <span th:text="*{answers}"></span><br/>
+<!--        Country Name: <span th:text="*{country.name}"></span><br/>-->
+<!--        Continent: <span th:text="*{country.continent}"></span><br/>-->
+    </div>
+</body>
+</html>

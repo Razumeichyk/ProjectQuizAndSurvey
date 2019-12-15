@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div th:object="${answer}">
+
+        Questions: <span th:text="*{question.content}"></span><br/>
+        Answer content: <span th:text="*{content}"></span><br/>
+        Question is correct: <span th:text="*{correct}"></span><br/>
+<!--        Answers: <span th:text="*{answers}"></span><br/>-->
+        <!--        Country Name: <span th:text="*{country.name}"></span><br/>-->
+        <!--        Continent: <span th:text="*{country.continent}"></span><br/>-->
+    </div>
+</body>
+</html>
